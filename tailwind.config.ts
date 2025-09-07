@@ -58,6 +58,25 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      backgroundImage: {
+        'neural': 'var(--gradient-neural)',
+        'neural-subtle': 'var(--gradient-neural-subtle)',
+        'gradient-background': 'var(--gradient-background)',
+        'gradient-card': 'var(--gradient-card)',
+      },
+      boxShadow: {
+        'neural': 'var(--shadow-neural)',
+        'glow': 'var(--shadow-glow)',
+        'accent': 'var(--shadow-accent)',
+      },
+      transitionProperty: {
+        'neural': 'var(--transition-neural)',
+      },
+      animation: {
+        'neural-pulse': 'var(--animation-pulse)',
+        'float': 'float 6s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -80,10 +99,14 @@ export default {
             height: "0",
           },
         },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        "glow": {
+          "0%": { filter: "brightness(1) saturate(1)" },
+          "100%": { filter: "brightness(1.2) saturate(1.3)" },
+        },
       },
     },
   },
